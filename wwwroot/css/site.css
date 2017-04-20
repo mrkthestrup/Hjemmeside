@@ -1,0 +1,22 @@
+﻿/*body */
+#homebody {
+		padding-top: 10px;	
+		
+        background-color: white;	
+}
+
+#wrapper {
+	background-color: white;
+	width: 100%;
+}
+
+#menubar {
+	background-color: #0E2458;
+}
+
+/* gør at knapperne i index kommer på en række */
+#containerclass {
+	width: 75%;
+}
+
+

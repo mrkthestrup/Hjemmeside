@@ -1,0 +1,8 @@
+C:\Users\thest\Desktop\hjemmeside2\bin\Debug\netcoreapp1.1\hjemmeside2.deps.json
+C:\Users\thest\Desktop\hjemmeside2\bin\Debug\netcoreapp1.1\hjemmeside2.runtimeconfig.json
+C:\Users\thest\Desktop\hjemmeside2\bin\Debug\netcoreapp1.1\hjemmeside2.runtimeconfig.dev.json
+C:\Users\thest\Desktop\hjemmeside2\bin\Debug\netcoreapp1.1\hjemmeside2.dll
+C:\Users\thest\Desktop\hjemmeside2\bin\Debug\netcoreapp1.1\hjemmeside2.pdb
+C:\Users\thest\Desktop\hjemmeside2\obj\Debug\netcoreapp1.1\hjemmeside2.AssemblyInfo.cs
+C:\Users\thest\Desktop\hjemmeside2\obj\Debug\netcoreapp1.1\hjemmeside2.dll
+C:\Users\thest\Desktop\hjemmeside2\obj\Debug\netcoreapp1.1\hjemmeside2.pdb

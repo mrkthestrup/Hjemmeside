@@ -1,0 +1,47 @@
+@model hjemmeside2.Models.Booking
+
+
+    <h1>Book en tid </h1>
+    <form action="/Booking/Create" method="POST">
+       <!-- <label asp-for= "ID "> </label>
+        <input placeholder = "ID" asp-for="ID"> <br> <br> -->
+        <label asp-for= "FirstName "> </label> <br>
+        <input placeholder = "Indtast dit navn" asp-for="FirstName"> 
+            <span asp-validation-for="FirstName" class="text-danger"></span> <br> <br>
+        
+        <label asp-for="LastName "></label><br>
+        <input placeholder = "Indtast dit Efternavn" asp-for="LastName"> 
+            <span asp-validation-for="LastName" class="text-danger"></span> <br> <br>
+        
+        <label asp-for="Email "></label><br>
+        <input placeholder = "Indtast dit Email addresse" asp-for="Email"> 
+            <span asp-validation-for="Email" class="text-danger"></span> <br> <br>
+       
+        <label asp-for="PhoneNumber"></label><br>
+        <input placeholder = "Indtast dit mobilnummer" asp-for="PhoneNumber"> 
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span> <br> <br>
+
+        <label asp-for="DateTimeny "></label><br>
+        <input placeholder = "Vælge en dato" asp-for= "DateTimeny">
+            <span asp-validation-for="DateTimeny" class="text-danger"></span> <br> <br>
+
+         <label asp-for="Tidspunkt"></label><br>
+         <input placeholder = "Vælge Tidspunkt" asp-for="Tidspunkt"> 
+            <span asp-validation-for="Tidspunkt" class="text-danger"></span> <br> <br>
+
+         <label asp-for="Combobox"> </label> <br>
+         <select required name="Combobox">
+             <option value="">None</option>
+             <option value="Herre"> Herre</option>
+             <option value="Dame"> Dame</option>
+             <option value="Barn"> Barn</option>
+         </select>
+            <span asp-validation-for="Combobox" class="text-danger"></span> <br> <br>
+
+           <label asp-for="Comments"></label><br>
+         <textarea placeholder = "Skriv en kommentar" asp-for="Comments"> </textarea>
+            <span asp-validation-for="Comments" class="text-danger"></span> <br> 
+
+
+        <input type="submit" value="Send">
+    </form>

@@ -1,0 +1,33 @@
+<h1>Information om bestilling</h1>
+       
+      <p><a href="~/Booking/Index">Tilbage til oversigten</a></p>
+      
+        <fieldset>
+        <legend>Kundeoplysninger</legend>
+
+        <p><span>Fornavn: </span>
+         <span>@Model.FirstName</span></p>
+
+        <p><span>Efternavn: </span>
+         <span>@Model.LastName</span></p>
+
+        <p><span>Email: </span>
+         <span>@Model.Email</span></p>
+         
+        <p><span>Mobil nummer: </span>
+         <span>@Model.PhoneNumber</span></p>
+         
+        <p><span>Dato: </span>
+         <span>@Model.DateTimeny</span></p>
+         
+        <p><span>Tidspunkt: </span>
+         <span>@Model.Tidspunkt</span></p>
+         
+        <p><span>Behandlingsform: </span>
+         <span>@Model.Combobox</span></p>
+                  
+        <p><span>Kommentar: </span>
+         <span>@Model.Comments</span></p>
+               
+
+        </fieldset>
