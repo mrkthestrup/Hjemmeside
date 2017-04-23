@@ -1,6 +1,9 @@
 @model IEnumerable<hjemmeside2.Models.Booking>
-
-        <h1>List over hvem der har bestilt tid</h1>
+@{
+    ViewData["Title"] = "Oversigt list over bestilte tider";
+}
+<h2>@ViewData["Title"]</h2>
+        
         <a class="btn btn-success" asp-action="Create">Opret en ny tid</a>
         <br>
         <br>
@@ -32,6 +35,8 @@
                 <a asp-action="Details" class="btn btn-info" asp-route-id="@item.ID">Details</a> </td>  
                 </tr>
             }
+            
         </table>
+     
 
  

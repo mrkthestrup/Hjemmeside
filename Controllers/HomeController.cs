@@ -32,6 +32,10 @@ namespace hjemmeside2.Controllers
             return View();
         }
 
+        public IActionResult Pris()
+        {
+            return View();
+        }
        
     }
 }
