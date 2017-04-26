@@ -14,7 +14,6 @@ namespace hjemmeside2.Migrations
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1");
-
             modelBuilder.Entity("hjemmeside2.Models.Booking", b =>
                 {
                     b.Property<int>("ID")

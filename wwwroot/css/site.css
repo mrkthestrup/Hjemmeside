@@ -18,7 +18,16 @@
 	font-size: 13px;
 }
 
+#footer {
+   position: relative;
+    bottom: 0;
+    height:100px;
+    background: white;
+    padding-left: 6%;
+}
 
+
+/* Navbar */
 .navbar-inverse {
   background-color:#0E2458;
   border-color: black;
@@ -57,5 +66,19 @@
   background-color: white;
 }
 
+.carousel{
+    background: white;
+    margin-top: 20px;
+    width: 75%;
+    margin: auto;
+    position: relative;
+}
 
+.carousel .item img{
+    margin: 0 auto;
+}
 
+#underConstruktion{
+  height: 700px;
+  width: 700px;
+}

@@ -10,7 +10,7 @@ public class MyDbContext : DbContext
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {
             optionBuilder.UseSqlite("Filename=./mydb.db");
-        } 
+        }
 
     }
 }
