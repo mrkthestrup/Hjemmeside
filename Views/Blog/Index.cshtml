@@ -1,5 +1,15 @@
+@model IEnumerable<hjemmeside2.Models.BlogPost>
+@{ 
+    Layout = "_Layout";
+}
 
+<h3>Blog</h3>
+<hr />
 
-<div>
-<img id="underConstruktion" src="~/image/UnderConstruktion.jpg" alt="blabla">
+<div class="blog-posts">
+    @foreach (var post in Model)
+    {
+        @Html.Partial("_Post", post)
+    
+    }
 </div>

@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using hjemmeside2.Models;
+using hjemmeside2.Models.Repositories;
 
 namespace hjemmeside2
 {
@@ -21,17 +22,15 @@ namespace hjemmeside2
             // Add framework services.
             services.AddDbContext<MyDbContext>();
             services.AddMvc();
+            services.AddScoped<IBookingRepository,BookingRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            
-            loggerFactory.AddConsole();
-
-
             app.UseStaticFiles();
-
+            loggerFactory.AddConsole();
+                      
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

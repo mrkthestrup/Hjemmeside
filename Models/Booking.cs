@@ -9,7 +9,7 @@ namespace hjemmeside2.Models
         public int ID { get; set; }
 
         [Display(Name = "Navn: ")]
-        [RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$")]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$", ErrorMessage = "Du skal starte med stort")]
         [Required]
         public string FirstName { get; set; }
 
@@ -21,7 +21,7 @@ namespace hjemmeside2.Models
         [Required]
         public string Email { get; set; }
 
-        [DataType(DataType.PhoneNumber)]      
+        [DataType(DataType.PhoneNumber, ErrorMessage = "Telefonnummer skal indeholde 8 tal")]      
         [Display(Name = "Mobil nummer: ")]
         [Required]
         public int PhoneNumber { get; set; }

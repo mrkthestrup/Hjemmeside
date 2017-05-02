@@ -3,9 +3,7 @@
 }
 <h2>@ViewData["Title"]</h2>
        
-      <p><a href="~/Booking/Index">Tilbage til oversigten</a></p>
-      
-        <fieldset>
+        <fieldset >
         <legend>Kundeoplysninger</legend>
 
         <p><span>Fornavn: </span>
@@ -31,6 +29,8 @@
                   
         <p><span>Kommentar: </span>
          <span>@Model.Comments</span></p>
+          <hr />     
                
+                <a class="btn btn-info" asp-controller="Booking" asp-action="index">Back to List</a>
 
         </fieldset>

@@ -1,0 +1,69 @@
+@model hjemmeside2.Models.Booking
+
+
+  <form asp-action="Edit" method="POST" class="form-horizontal">
+        <input class="form-control" type="Hidden" asp-for="ID">
+
+    <legend>Rediger</legend>
+    <div class="form-group">          
+                <label asp-for="FirstName" class="col-md-2 control-label"></label>
+                <div class="col-md-4">
+                <input class="form-control "asp-for="FirstName">
+            </div>
+        </div>
+         <div class="form-group">          
+                <label asp-for="LastName" class="col-md-2 control-label"></label>
+                <div class="col-md-4">
+                <input class="form-control "asp-for="LastName">
+            </div>
+        </div>
+         <div class="form-group">          
+                <label asp-for="Email" class="col-md-2 control-label"> </label>
+                <div class="col-md-4">
+                <input class="form-control "asp-for="Email">
+            </div>
+        </div>
+         <div class="form-group">          
+                <label asp-for="PhoneNumber" class="col-md-2 control-label"></label>
+                <div class="col-md-4">
+                <input class="form-control "asp-for="PhoneNumber">
+            </div>
+        </div>
+         <div class="form-group">          
+                <label asp-for="DateTimeny" class="col-md-2 control-label"></label>
+                <div class="col-md-4">
+                <input class="form-control "asp-for="DateTimeny">
+            </div>
+        </div>
+    
+         <div class="form-group">          
+                <label asp-for="Tidspunkt" class="col-md-2 control-label"></label>
+                <div class="col-md-4">
+                <input class="form-control "asp-for="Tidspunkt">
+            </div>
+        </div>
+
+          <div class="form-group">          
+                <label asp-for="Combobox" class="col-md-2 control-label"></label>
+                <div class="col-md-4">
+                <input class="form-control "asp-for="Combobox">
+            </div>
+        </div>
+
+          <div class="form-group">          
+                <label asp-for="Comments" class="col-md-2 control-label"></label>
+                <div class="col-md-4">
+                <input class="form-control "asp-for="Comments">
+            </div>
+        </div>
+        
+          <div class="col-md-1">
+            <button type="submit" class="btn btn-success">Update</button>
+         </div>    
+             <div class="col-md-1">  
+                <a class="btn btn-info" asp-controller="Booking" asp-action="index">Back to List</a>
+            </div> 
+   
+
+        </form>  
+            

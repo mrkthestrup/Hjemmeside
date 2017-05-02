@@ -1,33 +1,68 @@
-<h1>Information om bestilling</h1>
-       
-      <p><a href="~/Booking/Index">Tilbage til oversigten</a></p>
+@model hjemmeside2.Models.Booking
+
       
-        <fieldset>
-        <legend>Kundeoplysninger</legend>
+ <form asp-action="Delete" method="POST" class="form-horizontal">
+        <input class="form-control" type="Hidden" asp-for="ID">
 
-        <p><span>Fornavn: </span>
-         <span>@Model.FirstName</span></p>
+<legend>Delete</legend>       
 
-        <p><span>Efternavn: </span>
-         <span>@Model.LastName</span></p>
+    <div class="form-group">          
+                <label asp-for="FirstName" class="col-md-2 control-label"></label>
+                <div class="col-md-4">
+                <p><span>@Model.FirstName</span> </p>
+            </div>
+        </div>
+         <div class="form-group">          
+                <label asp-for="LastName" class="col-md-2 control-label"></label>
+                <div class="col-md-4">
+                <p><span>@Model.LastName</span></p>
+            </div>
+        </div>
+         <div class="form-group">          
+                <label asp-for="Email" class="col-md-2 control-label"> </label>
+                <div class="col-md-4">
+                <p><span>@Model.Email</span></p>
+            </div>
+        </div>
+         <div class="form-group">          
+                <label asp-for="PhoneNumber" class="col-md-2 control-label"></label>
+                <div class="col-md-4">
+                <p><span>@Model.PhoneNumber</span></p>
+            </div>
+        </div>
+         <div class="form-group">          
+                <label asp-for="DateTimeny" class="col-md-2 control-label"></label>
+                <div class="col-md-4">
+                <p><span>@Model.DateTimeny</span></p>
+            </div>
+        </div>
+    
+         <div class="form-group">          
+                <label asp-for="Tidspunkt" class="col-md-2 control-label"></label>
+                <div class="col-md-4">
+                <p><span>@Model.Tidspunkt</span></p>
+            </div>
+        </div>
 
-        <p><span>Email: </span>
-         <span>@Model.Email</span></p>
-         
-        <p><span>Mobil nummer: </span>
-         <span>@Model.PhoneNumber</span></p>
-         
-        <p><span>Dato: </span>
-         <span>@Model.DateTimeny</span></p>
-         
-        <p><span>Tidspunkt: </span>
-         <span>@Model.Tidspunkt</span></p>
-         
-        <p><span>Behandlingsform: </span>
-         <span>@Model.Combobox</span></p>
-                  
-        <p><span>Kommentar: </span>
-         <span>@Model.Comments</span></p>
-               
+          <div class="form-group">          
+                <label asp-for="Combobox" class="col-md-2 control-label"></label>
+                <div class="col-md-4">
+                <p><span>@Model.Combobox</span></p>
+            </div>
+        </div>
 
-        </fieldset>
+          <div class="form-group">          
+                <label asp-for="Comments" class="col-md-2 control-label"></label>
+                <div class="col-md-4">
+                <p><span>@Model.Comments</span></p>
+            </div>
+        </div>
+        
+          <div class="col-md-1">
+            <button type="submit" class="btn btn-danger">Delete</button>
+         </div>    
+             <div class="col-md-1">  
+                <a class="btn btn-info" asp-controller="Booking" asp-action="index">Back to List</a>
+            </div>
+
+        </form> 

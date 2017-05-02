@@ -7,6 +7,8 @@ public class MyDbContext : DbContext
     {
     
         public DbSet<Booking> Bookings { get; set; }
+        public DbSet<BlogPost> Blogs {get; set;}
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {
             optionBuilder.UseSqlite("Filename=./mydb.db");

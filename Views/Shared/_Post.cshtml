@@ -1,0 +1,14 @@
+@model hjemmeside2.Models.BlogPost
+
+
+<article class="blog-post">
+   
+    <h3>@Html.ActionLink(Model.Title, "Post", "Blog", new { year = Model.Posted.Year, month = Model.Posted.Month, key = Model.Key })</h3>
+    <div class="details">
+        Posted <span>@Model.Posted</span> by <span>@Model.Author</span>
+    </div>
+    <div class="content">
+        @Model.Body
+        <hr />
+    </div>
+</article>
