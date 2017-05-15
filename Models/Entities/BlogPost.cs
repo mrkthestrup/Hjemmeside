@@ -2,7 +2,7 @@ using System;
 using System.Text.RegularExpressions;
 using System.ComponentModel.DataAnnotations;
 
-namespace hjemmeside2.Models
+namespace hjemmeside2.Models.Entities
 {
     public class BlogPost
     {

@@ -12,13 +12,7 @@ namespace hjemmeside2.Controllers
     { 
         private readonly MyDbContext _db;
 
-      //  private IBlogPostRepository blogPostRepository;
-
-
-       // public BlogController(IBlogPostRepository blogPostRepository)
-       // {
-        //    this.blogPostRepository = blogPostRepository;
-       // }
+     
        public BlogController(MyDbContext db)
        {
            _db = db;
@@ -46,7 +40,7 @@ namespace hjemmeside2.Controllers
         }
 
         [HttpPost, Route("create")]
-        public IActionResult Create(BlogPost post)
+        public IActionResult Create(Models.Entities.BlogPost post)
         {
             if (!ModelState.IsValid)
                 return View();

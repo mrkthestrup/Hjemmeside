@@ -1,3 +1,4 @@
+using hjemmeside2.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace hjemmeside2.Models

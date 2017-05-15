@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using hjemmeside2.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace hjemmeside2.Models.Repositories
@@ -19,6 +20,11 @@ namespace hjemmeside2.Models.Repositories
         {
             _db.Blogs.Add(post);
             _db.SaveChanges();
+        }
+
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
         }
 
         public IEnumerable<BlogPost> GetAll()

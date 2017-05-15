@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using hjemmeside2.Models.Entities;
 
 namespace hjemmeside2.Models.Repositories
 {

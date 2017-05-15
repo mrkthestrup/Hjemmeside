@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using hjemmeside2.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace hjemmeside2.Models.Repositories

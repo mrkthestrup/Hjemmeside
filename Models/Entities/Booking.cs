@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace hjemmeside2.Models
+namespace hjemmeside2.Models.Entities
 {
 
     public class Booking
