@@ -15,22 +15,20 @@ namespace hjemmeside2.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1");
 
-            modelBuilder.Entity("hjemmeside2.Models.BlogPost", b =>
+            modelBuilder.Entity("hjemmeside2.Models.Entities.BlogPost", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Author");
 
-                    b.Property<string>("Body")
-                        .IsRequired();
+                    b.Property<string>("Body");
 
                     b.Property<string>("Key");
 
                     b.Property<DateTime>("Posted");
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasMaxLength(100);
 
                     b.HasKey("Id");
@@ -38,12 +36,10 @@ namespace hjemmeside2.Migrations
                     b.ToTable("Blogs");
                 });
 
-            modelBuilder.Entity("hjemmeside2.Models.Booking", b =>
+            modelBuilder.Entity("hjemmeside2.Models.Entities.Booking", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Combobox");
 
                     b.Property<string>("Comments");
 
@@ -64,6 +60,20 @@ namespace hjemmeside2.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Bookings");
+                });
+
+            modelBuilder.Entity("hjemmeside2.Models.Entities.TodoItem", b =>
+                {
+                    b.Property<int>("TodoItemID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<bool>("IsComplete");
+
+                    b.Property<string>("Task");
+
+                    b.HasKey("TodoItemID");
+
+                    b.ToTable("todoitems");
                 });
         }
     }

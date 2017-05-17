@@ -9,7 +9,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using hjemmeside2.Models;
 using hjemmeside2.Models.Repositories;
-
 namespace hjemmeside2
 {
     public class Startup
@@ -23,6 +22,7 @@ namespace hjemmeside2
             services.AddDbContext<MyDbContext>();
             services.AddMvc();
             services.AddScoped<IBookingRepository,BookingRepository>();
+            services.AddScoped<ITodoRepository, InMenTodoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -59,20 +59,7 @@
             </div>
          </div>
 
-        <div class="form-group">
-         <label asp-for="Combobox" class="col-md-2 control-label"> </label> 
-            <div class="col-md-4">
-                <select id="comboboxinput" class="form-control">
-                    <option value="">None</option>
-                    <option value="Herre"> Herre</option>
-                    <option value="Dame"> Dame</option>
-                    <option value="Barn"> Barn</option>
-                </select>
-                <span asp-validation-for="Combobox" class="text-danger"></span>
-            </div>     
-        </div>
-
-        <div class="form-group">
+           <div class="form-group">
           <label asp-for="Comments" class="col-md-2 control-label"></label>
             <div class="col-md-8">
                 <textarea id="kommentarinput" rows="5" class="form-control" placeholder = "Skriv en kommentar" asp-for="Comments"> </textarea>

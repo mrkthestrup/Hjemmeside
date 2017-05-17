@@ -36,9 +36,7 @@ namespace hjemmeside2.Models.Entities
         [DisplayFormat(DataFormatString = "{0:HH:mm}", ApplyFormatInEditMode = true)]
         public DateTime Tidspunkt {get; set;}
 
-        [Display(Name = "Behandlingsform: ")]
-        public string Combobox {get; set;}
-
+    
         [Display(Name = "Kommentar: ")]
         public string Comments { get; set; }
         

@@ -9,6 +9,8 @@ public class MyDbContext : DbContext
     
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<BlogPost> Blogs {get; set;}
+
+        public DbSet<TodoItem> todoitems { get; set; }
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {

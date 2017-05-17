@@ -1,7 +1,7 @@
 @model hjemmeside2.Models.Entities.Booking
 
 
-  <form asp-action="Edit" method="POST" class="form-horizontal">
+  <form asp-for="Booking" action="Edit" method="POST" class="form-horizontal">
         <input class="form-control" type="Hidden" asp-for="ID">
 
     <legend>Rediger</legend>
@@ -40,13 +40,6 @@
                 <label asp-for="Tidspunkt" class="col-md-2 control-label"></label>
                 <div class="col-md-4">
                 <input class="form-control "asp-for="Tidspunkt">
-            </div>
-        </div>
-
-          <div class="form-group">          
-                <label asp-for="Combobox" class="col-md-2 control-label"></label>
-                <div class="col-md-4">
-                <input class="form-control "asp-for="Combobox">
             </div>
         </div>
 
