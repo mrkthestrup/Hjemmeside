@@ -12,7 +12,7 @@
 
     <form asp-for="Booking" action="Create" method="POST" class="form-horizontal">
         <div class="form-group">
-        <label asp-for= "FirstName" class="col-md-2 control-label"> </label>
+        <label asp-for= "FirstName" class="col-md-1 control-label"> </label>
             <div class="col-md-4">
                 <input id="fornavninput" class="form-control" placeholder = "Indtast dit navn" asp-for="FirstName"> 
                 <span asp-validation-for="FirstName" class="text-danger"></span> 
@@ -20,7 +20,7 @@
         </div>
 
         <div class="form-group">
-        <label asp-for="LastName" class="col-md-2 control-label"></label>
+        <label asp-for="LastName" class="col-md-1 control-label"></label>
            <div class="col-md-4">
                 <input id="efternavninput" class="form-control" placeholder = "Indtast dit Efternavn" asp-for="LastName"> 
                 <span asp-validation-for="LastName" class="text-danger"></span> 
@@ -28,7 +28,7 @@
         </div>
 
         <div class="form-group">
-        <label asp-for="Email" class="col-md-2 control-label"></label>
+        <label asp-for="Email" class="col-md-1 control-label"></label>
             <div class="col-md-4">
                 <input id="emailinput" class="form-control" placeholder = "Indtast dit Email addresse" asp-for="Email"> 
                 <span asp-validation-for="Email" class="text-danger"></span> 
@@ -36,7 +36,7 @@
        </div>
 
        <div class="form-group">
-        <label asp-for="PhoneNumber" class="col-md-2 control-label"></label>
+        <label asp-for="PhoneNumber" class="col-md-1 control-label"></label>
             <div class="col-md-4">
                 <input id="phonenumberinput" class="form-control" placeholder = "Indtast dit mobilnummer" asp-for="PhoneNumber"> 
                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
@@ -44,7 +44,7 @@
         </div>
 
         <div class="form-group">    
-        <label asp-for="DateTimeny" class="col-md-2 control-label"></label>
+        <label asp-for="DateTimeny" class="col-md-1 control-label"></label>
              <div class="col-md-4">
                 <input id="datoinput" class="form-control" placeholder = "Vælge en dato" asp-for="DateTimeny">
                 <span asp-validation-for="DateTimeny" class="text-danger"></span>
@@ -52,7 +52,7 @@
         </div>
 
         <div class="form-group">
-         <label asp-for="Tidspunkt" class="col-md-2 control-label"></label>
+         <label asp-for="Tidspunkt" class="col-md-1 control-label"></label>
             <div class="col-md-4">
                 <input id="tidspunktinput" class="form-control" placeholder = "Vælge Tidspunkt" asp-for="Tidspunkt"> 
                 <span asp-validation-for="Tidspunkt" class="text-danger"></span>
@@ -60,11 +60,13 @@
          </div>
 
            <div class="form-group">
-          <label asp-for="Comments" class="col-md-2 control-label"></label>
+          <label asp-for="Comments" class="col-md-1 control-label"></label>
             <div class="col-md-8">
                 <textarea id="kommentarinput" rows="5" class="form-control" placeholder = "Skriv en kommentar" asp-for="Comments"> </textarea>
                 <span asp-validation-for="Comments" class="text-danger"></span> 
-                <br><input type="submit" value="Send">
+                <br>
+                <a class="btn btn-warning" asp-controller="Booking" asp-action="index">Fortryd</a>
+                <input type="submit"class="btn btn-success" value="Send">
             </div>
         </div> 
 

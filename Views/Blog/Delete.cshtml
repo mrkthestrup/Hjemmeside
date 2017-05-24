@@ -1,0 +1,39 @@
+<!-- @model hjemmeside2.Models.Entities.BlogPost
+
+    <form asp-action="Delete" method="POST"  class="form-horizontal">
+        <input class="form-control" type="Hidden" asp-for="Key"> 
+       
+        <div class="form-group">          
+            <label asp-for="Title" class="col-md-2 control-label"></label>
+                <div class="col-md-4">
+                    <p><span>@Model.Title</span></p>
+                </div>
+        </div> 
+
+        <div class="form-group">          
+            <label asp-for="Author" class="col-md-2 control-label"></label>
+                <div class="col-md-4">
+                    <p><span>@Model.Author</span></p>
+                </div>
+        </div>
+
+          <div class="form-group">          
+            <label asp-for="Posted" class="col-md-2 control-label"></label>
+                <div class="col-md-4">
+                    <p><span>@Model.Posted</span></p>
+                </div>
+        </div>
+
+        <div class="form-group">
+        <label asp-for="Body" class="col-md-2 control-label"></label>
+            <div class="col-md-4">
+                <p><span>@Model.Body</span></p>
+                <br> <button type="submit">Delete Post</button>
+                <a class="btn btn-info" asp-controller="Blog" asp-action="">Back to List</a>
+            </div>
+        </div>       
+    </form>
+    -->
+
+    <h1>Få en Adminstrator til at slette den fra database! </h1>
+    <a class="btn btn-warning" asp-controller="Blog" asp-action="">Tilbage til oversigten</a>

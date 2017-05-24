@@ -4,12 +4,15 @@
 }
 
 <h3>Blog</h3>
+<p>Her kan du få en oversigt over blogs som er skrevet på hjemmesiden
+<br>Klik her for at lave en ny <a class="link" asp-action="Create">blog</a></p>
+
 <hr />
 
 <div class="blog-posts">
-    @foreach (var post in Model)
+    @foreach (var item in Model)
     {
-        @Html.Partial("_Post", post)
-    
+        @Html.Partial("_Post", item)
+                   
     }
 </div>

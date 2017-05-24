@@ -29,16 +29,21 @@
 					<!-- Links in navbar -->
 					<div class="navbar-collapse collapse">                  
 						<ul class="nav navbar-nav">
-							<li><a asp-controller="Booking" asp-action="Create">Book en tid</a></li>
-							<li><a asp-controller="Home" asp-action="Hit">Hit</a></li>
-							<li><a asp-controller="Booking" asp-action="Index">Oversigt</a></li>
+							<!-- dropdown menu -->
+							<li class="dropdown"> 
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Book <span class="caret"></span></a>
+         						 <ul class="dropdown-menu">
+									<li><a asp-controller="Booking" asp-action="Index">Oversigt over tider</a></li>
+									<li><a asp-controller="Booking" asp-action="Create">Book en tid</a></li>
+         						 </ul></li>	 
 							<!-- dropdown menu -->
 							<li class="dropdown"> 
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog <span class="caret"></span></a>
          						 <ul class="dropdown-menu">
-								<li><a a asp-controller="Blog" asp-action="Index">Blog oversigt</a></li>
-            					<li><a a asp-controller="Blog" asp-action="Create">Create new blog</a></li>
-         						 </ul></li>	                    
+									<li><a a asp-controller="Blog" asp-action="Index">Blog oversigt</a></li>
+									<li><a a asp-controller="Blog" asp-action="Create">Lav en ny blog</a></li>
+         						 </ul></li>
+								  <li><a asp-controller="Home" asp-action="Hit">Hit</a></li>	                    
 							<li><a asp-controller="Home" asp-action="About">Hvem er jeg?</a></li>
 						<!--	<li><a asp-controller="Home" asp-action="Contact">Kontakt os</a></li> -->
 							<li><a asp-controller="Todos" asp-action="Index">Webapi </a></li>												

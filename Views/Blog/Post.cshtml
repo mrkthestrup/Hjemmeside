@@ -4,3 +4,6 @@
 }
 
 @Html.Partial("_Post")
+<a class="btn btn-warning" asp-controller="Blog" asp-action="">Tilbage til oversigten</a>
+<a asp-action="Edit" class="btn btn-primary"  asp-route-id="@Model.Id">Edit</a>
+<a asp-action="Delete" class="btn btn-danger" asp-route-id="@Model.Id">Delete</a>            

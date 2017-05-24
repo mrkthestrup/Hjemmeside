@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using hjemmeside2.Models;
+using hjemmeside2.Models.Entities;
 using hjemmeside2.Models.Repositories;
 using Microsoft.AspNetCore.Mvc;
 namespace hjemmeside2.Controllers
@@ -19,10 +20,9 @@ namespace hjemmeside2.Controllers
        }
 
         [Route("")]
-        public IActionResult Index(int page = 0)
-        {
-            var posts = _db.Blogs.OrderByDescending(x => x.Posted).Take(5).ToArray();
-
+        public IActionResult Index()
+        {// tager efter dato
+           IEnumerable<BlogPost> posts = _db.Blogs.OrderByDescending(x => x.Posted); 
             return View(posts);
         }
 
@@ -45,7 +45,7 @@ namespace hjemmeside2.Controllers
             if (!ModelState.IsValid)
                 return View();
 
-            post.Author = User.Identity.Name;
+          //  post.Author = User.Identity.Name;
             post.Posted = DateTime.Now;
 
             _db.Blogs.Add(post);
@@ -58,5 +58,49 @@ namespace hjemmeside2.Controllers
                 key = post.Key
             });
         }
+
+        [HttpGet, Route("Delete")]
+        public IActionResult Delete(long Id)
+        {
+           BlogPost blog2 = _db.Blogs.Find(Id);
+            return View(blog2);
+        }
+
+        //Delete
+        [HttpPost, Route("Delete")]
+        public IActionResult Delete(BlogPost bp)
+        {
+             BlogPost blogs = _db.Blogs.Find(bp.Id);
+            _db.Blogs.Remove(blogs);
+            _db.SaveChanges();
+           
+            return RedirectToAction("");
+        }
+
+        //Eidt or update
+        [HttpGet, Route("Edit")]
+        public IActionResult Edit(long Id)
+        {
+           BlogPost blog2 = _db.Blogs.Find(Id);
+            return View(blog2);
+        }
+      
+      //Edit or update
+       [HttpPost, Route("Edit")]
+        public IActionResult Edit(BlogPost bp)
+        {
+           
+            bp.Posted = DateTime.Now;
+
+                _db.Blogs.Update(bp);
+                _db.SaveChanges();
+                    
+            return RedirectToAction("Post", "Blog", new
+            {
+                year = bp.Posted.Year,
+                month = bp.Posted.Month,
+                key = bp.Key
+            });
+        }        
     }
 }
