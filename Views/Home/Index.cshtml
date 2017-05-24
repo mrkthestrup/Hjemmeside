@@ -1,7 +1,4 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
+﻿@model IEnumerable<hjemmeside2.Models.Entities.BlogPost>
 <h2>Velkommen til denne utrolige hjemmeside</h2>
     <p>Skole opgave </p>
 
@@ -20,9 +17,15 @@
 
         <div class="aside blog-post col-md-6">
         <aside>
-        <h2>Se min dejlig blog</h2> 
-           <p>Her skal en oversigt være over mine blogs, når det engang bliver lavet :)</p>
-           <p>Virker ikke en skid!!! :(</p>
-        </aside>
+            <div class="blog-posts">
+                <h3>Se de senete blogs!</h3>
+                    @foreach (var post in Model)
+                    {
+                        @Html.Partial("_Post", post)
+                    
+                    }
             </div>
+        </aside>
+        </div>
+
     </div>

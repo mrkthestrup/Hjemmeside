@@ -80,12 +80,12 @@ namespace hjemmeside2.Controllers
        [HttpPost]
         public IActionResult Edit(Booking bk)
         {
-           if (ModelState.IsValid)
-             {
+           //if (ModelState.IsValid)
+            // {
                 bookingRepository.Update(bk);
-                return RedirectToAction("Index");
-           }
-            return View(bk);
+              //  return RedirectToAction("Index");
+          // }
+            return RedirectToAction("Index");
         }
         
         //Details
