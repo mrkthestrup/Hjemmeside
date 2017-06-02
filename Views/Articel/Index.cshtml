@@ -1,0 +1,36 @@
+@model IEnumerable<hjemmeside2.Models.Entities.Articel>
+
+
+<h3>Artikler</h3>
+<p>Her kan du få en oversigt over Artikler som er skrevet på hjemmesiden
+<br>Klik her for at lave en ny <a class="link" asp-action="Create">Artikel til hjemmesiden</a></p>
+
+<hr />
+
+<br>
+        <table class="table table-hover"> 
+            <tr> 
+                <th>ID</th>
+                <th>@Html.DisplayNameFor(Models => Models.Title) </th>
+                <th>@Html.DisplayNameFor(Models => Models.Author) </th>
+                 <th>@Html.DisplayNameFor(Models => Models.Body) </th>
+                <th>@Html.DisplayNameFor(Models => Models.Posted) </th>
+               
+                <th> Information </th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr >  
+                    <td>@Html.DisplayFor(modelItem => item.ArticelID) </td> 
+                    <td>@Html.DisplayFor(modelItem => item.Title) </td> 
+                    <td>@Html.DisplayFor(modelItem => item.Author) </td> 
+                   <td>@Html.DisplayFor(modelItem => item.Body) </td>
+                    <td>@Html.DisplayFor(modelItem => item.Posted) </td>                   
+                    <td> <a asp-action="Edit" class="btn btn-primary"  asp-route-id="@item.ArticelID">Edit</a>
+                         <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.ArticelID">Delete</a>
+                         <a asp-action="Details" class="btn btn-info" asp-route-id="@item.ArticelID">Details</a> 
+                    </td>  
+                </tr>
+            }
+            
+        </table>

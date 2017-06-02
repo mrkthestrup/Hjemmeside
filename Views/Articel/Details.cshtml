@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Information om Artikelen";
+}
+<h2>@ViewData["Title"]</h2>
+       
+        <fieldset >
+        <legend>Oplysninger</legend>
+
+        <p><span>Title: </span>
+         <span>@Model.Title</span></p>
+
+        <p><span>Author: </span>
+         <span>@Model.Author</span></p>
+
+        <p><span>Body: </span>
+         <span>@Model.Body</span></p>
+        
+         <a class="btn btn-warning" asp-controller="Articel" asp-action="index">Tilbage til oversigten</a>
+          <hr />     
+
+        </fieldset>

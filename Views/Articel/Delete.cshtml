@@ -1,0 +1,39 @@
+@model hjemmeside2.Models.Entities.Articel
+
+    <form asp-action="Delete" method="POST"  class="form-horizontal">
+        <input class="form-control" type="Hidden" asp-for="ArticelID"> 
+       
+        <div class="form-group">          
+            <label asp-for="Title" class="col-md-2 control-label"></label>
+                <div class="col-md-4">
+                    <p><span>@Model.Title</span></p>
+                </div>
+        </div> 
+
+        <div class="form-group">          
+            <label asp-for="Author" class="col-md-2 control-label"></label>
+                <div class="col-md-4">
+                    <p><span>@Model.Author</span></p>
+                </div>
+        </div>
+
+          <div class="form-group">          
+            <label asp-for="Posted" class="col-md-2 control-label"></label>
+                <div class="col-md-4">
+                    <p><span>@Model.Posted</span></p>
+                </div>
+        </div>
+
+        <div class="form-group">
+        <label asp-for="Body" class="col-md-2 control-label"></label>
+            <div class="col-md-4">
+                <p><span>@Model.Body</span></p>
+                <br> <a class="btn btn-warning" asp-controller="Articel" asp-action="Index">Tilbage til oversigten</a> 
+                <button class="btn btn-success" type="submit">Delete Post</button>
+                 
+            </div>
+        </div>       
+    </form>
+
+
+   

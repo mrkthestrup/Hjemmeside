@@ -9,6 +9,22 @@ namespace hjemmeside2.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Articels",
+                columns: table => new
+                {
+                    ArticelID = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Author = table.Column<string>(nullable: true),
+                    Body = table.Column<string>(nullable: true),
+                    Posted = table.Column<DateTime>(nullable: false),
+                    Title = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Articels", x => x.ArticelID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Blogs",
                 columns: table => new
                 {
@@ -61,6 +77,9 @@ namespace hjemmeside2.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Articels");
+
             migrationBuilder.DropTable(
                 name: "Blogs");
 

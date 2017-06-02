@@ -3,32 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using hjemmeside2.Models;
+using hjemmeside2.Models.Repositories;
+using hjemmeside2.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace hjemmeside2.Controllers
 {
     public class HomeController : Controller
     {
-          private readonly MyDbContext _db;
+          private MyDbContext _db;
+
+          private IArticelRepository ariticelRepository; 
 
      
-       public HomeController(MyDbContext db)
+       public HomeController(MyDbContext db, IArticelRepository ariticelRepository )
        {
+           this.ariticelRepository = ariticelRepository;
            _db = db;
        }
 
-          public IActionResult Index(int page = 0)
+          public IActionResult Index()
         {
-            var posts = _db.Blogs.OrderByDescending(x => x.Posted).Take(5).ToArray();
+            ViewArticelBlogPost vab = new ViewArticelBlogPost();
+            vab.articels = ariticelRepository.GetAll();
+           vab.blogs = _db.Blogs.OrderByDescending(x => x.Posted).Take(5).ToArray();
 
-            return View(posts);
+           return View(vab);
+           // return View(posts);
         }
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewArticelBlogPost vab = new ViewArticelBlogPost();
+            vab.articels = ariticelRepository.GetAll();
 
-            return View();
+            return View(vab);
         }
 
         public IActionResult Contact()

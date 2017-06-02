@@ -1,13 +1,13 @@
-@model hjemmeside2.Models.Entities.BlogPost
+@model hjemmeside2.Models.Entities.Articel
 
-    <form asp-action="Create" asp-controller="Blog" class="form-horizontal">
-        <h2>Lav en ny artikel til din blog</h2>
+    <form asp-action="Create" asp-controller="Articel" method="POST" class="form-horizontal">
+        <h2>Lav en ny artikel</h2>
         <hr />
         <div class="form-group">   
         <label asp-for="Title" class="col-md-1 control-label"></label>
             <div class="col-md-4">
-                <input asp-for="Title" class="form-control" placeholder="Titlen på bloggen"/>
-                <span asp-validation-for="Title" class="text-danger"></span>
+                <input asp-for="Title" class="form-control" placeholder="Title"/>
+                
             </div>
         </div>
 
@@ -15,7 +15,7 @@
         <label asp-for="Author" class="col-md-1 control-label"></label>
             <div class="col-md-4">
                 <input asp-for="Author" class="form-control" placeholder="Forfatter"/>
-                <span asp-validation-for="Author" class="text-danger"></span>
+                
             </div>
         </div>
 
@@ -23,10 +23,10 @@
         <label asp-for="Body" class="col-md-1 control-label"></label>
             <div class="col-md-8">
                 <textarea rows="10" asp-for="Body" class="form-control" placeholder="Indhold"></textarea>
-                <span asp-validation-for="Body" class="text-danger"></span>
+                
                 <br> 
-                <button class="btn btn-warning" asp-controller="Blog" asp-action="">Fortryd</button>
-                <button type="submit" class="btn btn-success">Create Post</button>
+                <a class="btn btn-warning" asp-controller="Articel" asp-action="Index">Tilbage til oversigten</a>
+                <button type="submit" class="btn btn-success">Create artikel</button>
             </div>
         </div>       
     </form>

@@ -1,12 +1,14 @@
-﻿@{
-    ViewData["Title"] = "Hvem er vi?";
-}
-<h2>@ViewData["Title"]</h2>
-<!--
-<h2>@ViewData["Title"].</h2>
-<h3>@ViewData["Message"]</h3> -->
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-    Autem ea harum tempore non possimus quisquam corporis velit, 
-    officiis error beatae neque, at voluptas incidunt, distinctio dicta. Adipisci sequi ad reiciendis.
-</p>
+﻿@model hjemmeside2.Models.ViewModels.ViewArticelBlogPost
+<div class"container">
+        @foreach (var c in Model.articels)
+        {
+           if(@c.ArticelID == 4)
+           {
+            <h3>@c.Title</h3>
+            <div class="content">
+                @c.Body
+                <hr />
+            </div>
+           }
+        }
+</div>

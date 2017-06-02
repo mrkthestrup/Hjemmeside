@@ -1,28 +1,35 @@
-﻿@model IEnumerable<hjemmeside2.Models.Entities.BlogPost>
-<h2>Velkommen til denne utrolige hjemmeside</h2>
-    <p>Skole opgave </p>
+﻿@model hjemmeside2.Models.ViewModels.ViewArticelBlogPost
 
    <div class"container">
         <div class="article col-md-6">
-        <article> 
-        <h2>Dette er en overskift</h2>        
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quasi, 
-        eum enim unde amet quod mollitia autem obcaecati sit porro, 
-        cupiditate saepe neque reiciendis cumque illo, perferendis minus pariatur voluptates. 
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore hic, 
-        architecto excepturi, quis veniam illo nihil totam. 
-        Similique modi suscipit doloribus, ipsam, et aliquid eos beatae harum nobis fuga, natus? 
-        </article>
-        </div>
+             <h2>Velkommen til denne utrolige hjemmeside</h2>
+            <p>Skole opgave </p>
+    <article>         
+       @foreach (var c in Model.articels)
+       {
+           if(@c.ArticelID == 2)
+           {
+            <h3>@c.Title</h3>
+                <div class="details">
+                    by <span>@c.Author</span>
+                </div>
+            <div class="content">
+                @c.Body
+                <hr />
+            </div>
+           }
+       }
+
+    </article>
+    </div>
 
         <div class="aside blog-post col-md-6">
         <aside>
             <div class="blog-posts">
                 <h3>Se de senete blogs!</h3>
-                    @foreach (var post in Model)
+                    @foreach (var post in Model.blogs)
                     {
                         @Html.Partial("_Post", post)
-                    
                     }
             </div>
         </aside>

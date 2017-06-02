@@ -15,6 +15,24 @@ namespace hjemmeside2.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1");
 
+            modelBuilder.Entity("hjemmeside2.Models.Entities.Articel", b =>
+                {
+                    b.Property<int>("ArticelID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Author");
+
+                    b.Property<string>("Body");
+
+                    b.Property<DateTime>("Posted");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("ArticelID");
+
+                    b.ToTable("Articels");
+                });
+
             modelBuilder.Entity("hjemmeside2.Models.Entities.BlogPost", b =>
                 {
                     b.Property<long>("Id")

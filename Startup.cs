@@ -23,6 +23,7 @@ namespace hjemmeside2
             services.AddMvc();
             services.AddScoped<IBookingRepository,BookingRepository>();
             services.AddScoped<ITodoRepository, InMenTodoRepository>();
+            services.AddScoped<IArticelRepository, ArticelRepostory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

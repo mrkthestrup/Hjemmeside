@@ -8,13 +8,31 @@ using hjemmeside2.Models;
 namespace hjemmeside2.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20170517181452_first")]
+    [Migration("20170601191111_first")]
     partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1");
+
+            modelBuilder.Entity("hjemmeside2.Models.Entities.Articel", b =>
+                {
+                    b.Property<int>("ArticelID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Author");
+
+                    b.Property<string>("Body");
+
+                    b.Property<DateTime>("Posted");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("ArticelID");
+
+                    b.ToTable("Articels");
+                });
 
             modelBuilder.Entity("hjemmeside2.Models.Entities.BlogPost", b =>
                 {

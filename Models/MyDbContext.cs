@@ -11,7 +11,8 @@ public class MyDbContext : DbContext
         public DbSet<BlogPost> Blogs {get; set;}
 
         public DbSet<TodoItem> todoitems { get; set; }
-        
+
+        public DbSet<Articel> Articels {get; set;}         
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {
             optionBuilder.UseSqlite("Filename=./mydb.db");

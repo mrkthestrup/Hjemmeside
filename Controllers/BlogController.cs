@@ -11,7 +11,7 @@ namespace hjemmeside2.Controllers
     [Route("blog")]
     public class BlogController : Controller
     { 
-        private readonly MyDbContext _db;
+        private MyDbContext _db;
 
      
        public BlogController(MyDbContext db)
