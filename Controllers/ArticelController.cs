@@ -5,7 +5,7 @@ using hjemmeside2.Models.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace hjemmeside2.Controllers
-{
+{    
     public class ArticelController : Controller
     {
         private IArticelRepository articelRepository;

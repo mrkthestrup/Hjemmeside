@@ -6,6 +6,7 @@ using hjemmeside2.Models;
 using hjemmeside2.Models.Entities;
 using hjemmeside2.Models.Repositories;
 using Microsoft.AspNetCore.Mvc;
+
 namespace hjemmeside2.Controllers
 {   
     [Route("blog")]
@@ -18,7 +19,7 @@ namespace hjemmeside2.Controllers
        {
            _db = db;
        }
-
+       // Tight Couple
         [Route("")]
         public IActionResult Index()
         {// tager efter dato

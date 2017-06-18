@@ -7,7 +7,7 @@
     <article>         
        @foreach (var c in Model.articels)
        {
-           if(@c.ArticelID == 2)
+           if(@c.ArticelID == 2 || c.ArticelID == 5)
            {
             <h3>@c.Title</h3>
               

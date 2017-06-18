@@ -26,10 +26,10 @@ namespace hjemmeside2.Controllers
         {
             ViewArticelBlogPost vab = new ViewArticelBlogPost();
             vab.articels = ariticelRepository.GetAll();
-           vab.blogs = _db.Blogs.OrderByDescending(x => x.Posted).Take(5).ToArray();
+            vab.blogs = _db.Blogs.OrderByDescending(x => x.Posted).Take(5).ToArray();
 
            return View(vab);
-           // return View(posts);
+           
         }
 
         public IActionResult About()
@@ -42,13 +42,11 @@ namespace hjemmeside2.Controllers
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
-
             return View();
         }
+
         public IActionResult HIT()
         {
-        
             return View();
         }
 
